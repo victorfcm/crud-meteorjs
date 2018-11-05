@@ -29,4 +29,16 @@ Template.body.events({
         // Clear form
         target.text.value = '';
     },
+
+    'submit .edit-task'(event) {
+        // Prevent default browser form submit
+        event.preventDefault();
+
+        const target = event.target;
+        const text = target.text.value;
+
+        Tasks.update(this._id, {
+            $set: { text: text },
+        });
+    }
 });

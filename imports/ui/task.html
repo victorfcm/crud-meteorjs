@@ -2,8 +2,11 @@
     <li class="{{#if checked}}checked{{/if}}">
         <button class="delete">&times;</button>
 
+        Done?
         <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
 
-        <span class="text">{{text}}</span>
+        <form class="edit-task">
+            <input type="text" value="{{text}}" name="text" class="text-edit" disabled="{{#if checked}}disabled{{/if}}">
+        </form>
     </li>
 </template>

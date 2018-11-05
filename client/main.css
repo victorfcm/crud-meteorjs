@@ -49,17 +49,17 @@ form {
   position: relative;
 }
 
-.new-task input {
+.new-task input, .edit-task input {
   box-sizing: border-box;
-  padding: 10px 0;
+  padding: 10px 10px;
   background: transparent;
-  border: none;
+  border: 1px solid #c0c0c0;
   width: 100%;
   padding-right: 80px;
   font-size: 1em;
 }
 
-.new-task input:focus{
+.new-task input:focus, .edit-task input{
   outline: 0;
 }
 
